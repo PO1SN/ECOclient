@@ -2,7 +2,7 @@
 
 module.exports = {
 	disableFrameRateLimit: {
-		name: 'Disable Frame Rate Limit',
+		name: 'Framerate limiter (By RefreshRate)',
 		id: 'disableFrameRateLimit',
 		cat: 'Performance',
 		type: 'checkbox',

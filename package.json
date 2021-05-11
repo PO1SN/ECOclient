@@ -1,5 +1,5 @@
 {
-  "name": "idkr",
+  "name": "ecoclient",
   "version": "1.2.2",
   "description": "idk, just a Krunker client",
   "main": "app/main.js",
@@ -19,7 +19,7 @@
   "keywords": [
     "Krunker"
   ],
-  "author": "Mixaz",
+  "author": "PO1SN",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mixaz017/idkr/issues"

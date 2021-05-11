@@ -46,7 +46,7 @@ window._clientUtil.events.on('game-load', () => {
 	let origGetSettings = settingsWindow.getSettings;
 	settingsWindow.getSettings = (...args) => origGetSettings.call(settingsWindow, ...args).replace(/^<\/div>/, '') + settingsWindow.getCSettings();
 
-	let clientTabIndex = settingsWindow.tabs.push({ name: 'idkr', categories: [] });
+	let clientTabIndex = settingsWindow.tabs.push({ name: 'ECO', categories: [] });
 	settingsWindow.getCSettings = () => {
 		if (clientTabIndex != settingsWindow.tabIndex + 1 && !settingsWindow.settingSearch) {
 			return '';
@@ -64,7 +64,7 @@ window._clientUtil.events.on('game-load', () => {
 				previousCategory = entry.cat;
 				tempHTML += `<div class='setHed' id='setHed_${btoa(entry.cat)}' onclick='window.windows[0].collapseFolder(this)'><span class='material-icons plusOrMinus'>keyboard_arrow_down</span> ${entry.cat}</div><div id='setBod_${btoa(entry.cat)}'>`;
 			}
-			tempHTML += `<div class='settName'${entry.needsRestart ? ' title="Requires Restart"' : ''}${entry.hide ? ` id='c_${entry.id}_div' style='display: none'` : ''}>${entry.name}${entry.needsRestart ? ' <span style="color: #eb5656">*</span>' : ''} ${entry.html()}</div>`;
+			tempHTML += `<div class='settName'${entry.needsRestart ? ' title="Game restart required."' : ''}${entry.hide ? ` id='c_${entry.id}_div' style='display: none'` : ''}>${entry.name}${entry.needsRestart ? ' <span style="color: #eb5656">*</span>' : ''} ${entry.html()}</div>`;
 		});
 		return tempHTML ? tempHTML + '</div>' : '';
 	};
